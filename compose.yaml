@@ -1,0 +1,11 @@
+services:
+  api:
+    build:
+      context: .
+      target: builder
+    container_name: fastapi-application
+    environment:
+      PORT: 8008
+    ports:
+      - '8008:8008'
+    restart: "no"
